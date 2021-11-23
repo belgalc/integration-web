@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <script src="react.development.js" crossorigin"></script>
+    <script src="react-dom.development.js" crossorigin"></script>
+    <script src="babel.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+   
+    <script type="text/babel">
+        class App extends React.Compenent(){
+            constructor(props){
+                super(props);
+                this.state={
+                    msg:"veuillez vous inscrire",
+                    ins:"inscription"
+                }
+            }
+           body={
+                fontStyle:"bold",
+                color:"teal"  }
+
+                render(){
+                    return(
+                        <div>
+                            <h1 style={this.styles}>  {this.state.msg} </h1>
+                            <button> {this.state.ins} </button>
+                            </div>)
+                }
+                }
+                
+     const elt = <App/>
+     ReactDOM.render(elt,document.getElementById("root"))
+                </script>
+</body>
+</html>
